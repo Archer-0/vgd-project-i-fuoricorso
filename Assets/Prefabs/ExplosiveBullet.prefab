@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1211765739702066}
+  m_IsPrefabAsset: 1
+--- !u!1 &1211765739702066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4687330491787242}
+  - component: {fileID: 114274926078709832}
+  - component: {fileID: 114520764003269738}
+  m_Layer: 11
+  m_Name: ExplosiveBullet
+  m_TagString: Granade
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4687330491787242
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211765739702066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.447441, y: 0.6578, z: 24.23124}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114274926078709832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211765739702066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d69b66273a76945b62ecdc28e900bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 1969740260970298, guid: ddfcc572a8f38de4980d58b97af54a21,
+    type: 2}
+  explosionSound: {fileID: 8300000, guid: 87a91c726c1d65340b5170caf5f2bde6, type: 3}
+  damageLayerMask:
+    serializedVersion: 2
+    m_Bits: 768
+--- !u!114 &114520764003269738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211765739702066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b4d2679563c7e4d9769cd327ee40b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _addPlayTimeTag: 0
+  _isUnlocked: 0
+  _name: Granade
+  _description: It is a granade. Nothing more, nothing less.
+  _damage: 200
+  _range: 0
+  _impactForce: 0
+  _infinteAmmos: 0
+  _currentChargerAmmo: 10
+  _maxChargerAmmo: 10
+  _currentAmmo: 0
+  _maxAmmo: 0
+  _id: 4
+  _automatic: 0
+  _fireRate: 0
+  _isGranade: 1
+  _granadeRadius: 5
+  _granadeDelay: 0.1
+  _granadeForceImpactOfContact: 50
+  _granadExplosionForce: 85

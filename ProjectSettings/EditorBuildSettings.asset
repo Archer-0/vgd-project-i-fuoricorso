@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_SCENES/MainMenu.unity
+    guid: 2779368d08557d243945b219de5dd5cf
+  - enabled: 1
+    path: Assets/_SCENES/LoaderScreen.unity
+    guid: eed0fc54ad998d14083a4e70a3b0cfa3
+  - enabled: 1
+    path: Assets/_SCENES/Level-0.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/_SCENES/Level-1.unity
+    guid: 572cae5329ce7fc419cf6234f507f410
+  - enabled: 1
+    path: Assets/_SCENES/Level-2.unity
+    guid: 338ae8eac727895418b14a869dddca77
+  - enabled: 1
+    path: Assets/_SCENES/Level-3.unity
+    guid: dbc242091b2765542a6b8b866b2de527
+  - enabled: 1
+    path: Assets/_SCENES/Level-4-gotocreditsafterdeath.unity
+    guid: 818986cdb8aa3e94e89dd733db6d4a36
+  - enabled: 1
+    path: Assets/_SCENES/Credits.unity
+    guid: 36dca4717bd795740a08fae26c336677
+  m_configObjects: {}
