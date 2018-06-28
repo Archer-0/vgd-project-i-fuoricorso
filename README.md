@@ -1,1 +1,0 @@
-# vgd-project-i-fuoricorso

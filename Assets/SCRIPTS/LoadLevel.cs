@@ -52,13 +52,20 @@ public class LoadLevel : MonoBehaviour {
         }
 
         // disattivate di default per poter avviare l'animazione all'attivazione
-        title.gameObject.SetActive(false);
-        hintsField.gameObject.SetActive(false);
-        progressBar.gameObject.SetActive(false);
+        if (title != null)
+            title.gameObject.SetActive(false);
+        if (hintsField != null)
+            hintsField.gameObject.SetActive(false);
+        if (progressBar != null)
+            progressBar.gameObject.SetActive(false);
+        if (fadeOverlay != null)
+            fadeOverlay.gameObject.SetActive(true);
 
-        fadeOverlay.gameObject.SetActive(true);
         currentScene = SceneManager.GetActiveScene();
-        StartCoroutine(AsyncLoad(sceneToLoad));
+
+        if (title != null && hintsField != null && progressBar != null && fadeOverlay != null)
+            StartCoroutine(AsyncLoad(sceneToLoad));
+
     }
 
     private IEnumerator AsyncLoad(int levelIndex) {
@@ -80,10 +87,11 @@ public class LoadLevel : MonoBehaviour {
             Debug.Log(operation.progress);
         }
 
-        UpdateProgressBar(1);
 
         if (loadSceneMode == LoadSceneMode.Additive && audioListener != null)
             audioListener.enabled = false;
+
+        UpdateProgressBar(1);
 
         //yield return new WaitForSeconds(waitAfterLoadEnd);
 

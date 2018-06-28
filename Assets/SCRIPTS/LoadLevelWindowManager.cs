@@ -18,6 +18,10 @@ public class LoadLevelWindowManager : MonoBehaviour {
     }
 
     IEnumerator ShowLevelsWindow() {
+        foreach(CanvasGroup level in levels) {
+            level.alpha = 0;
+        }
+
         while(window.alpha < 1) {
             window.alpha += alphaSpeedWindow * Time.deltaTime;
             yield return null;
@@ -33,26 +37,26 @@ public class LoadLevelWindowManager : MonoBehaviour {
             yield return null;
         }
 
+        //if (PlayerPrefs.GetInt("isGameFinished") == 1) {
 
-        if (PlayerPrefs.GetInt("isGameFinished") == 1) {
-            foreach(CanvasGroup level in levels) {
-                level.gameObject.SetActive(true);
-                while (level.alpha < 1) {
-                    level.alpha += alphaSpeedLevels * Time.deltaTime;
-                    yield return null;
-                }
-            }
-
-        } else {
-            foreach (CanvasGroup level in levels) {
-                level.gameObject.SetActive(false);
-            }
-
-            while (noLevelsText.alpha < 1) {
-                noLevelsText.alpha += alphaSpeedLevels * Time.deltaTime;
+        foreach(CanvasGroup level in levels) {
+            level.gameObject.SetActive(true);
+            while (level.alpha < 1) {
+                level.alpha += alphaSpeedLevels * Time.deltaTime;
                 yield return null;
             }
         }
+
+        //} else {
+        //    foreach (CanvasGroup level in levels) {
+        //        level.gameObject.SetActive(false);
+        //    }
+
+        //    while (noLevelsText.alpha < 1) {
+        //        noLevelsText.alpha += alphaSpeedLevels * Time.deltaTime;
+        //        yield return null;
+        //    }
+        //}
     }
 
     public void ChoseLevel(int levelIndex) {
